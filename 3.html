@@ -3,38 +3,37 @@
 <head>
   <title>팝송 - Hallelujah</title>
   <meta charset="utf-8">
-  <style>
-  body{
-  margin:0;
-  }
-  a {
-    color:black;
-    text-decoration: none;
-  }
-  h1 {
-    font-size: 80px;
-    text-align: center;
-    border-bottom:1px solid gray;
-    margin:0;
-    padding:20px;
-  }
-  #grid ol{
-    border-right:1px solid gray;
-    width:200px;
-    margin:0;
-    padding:20px;
-  }
-  #grid {
-    display:grid;
-    grid-template-columns: 300px 1fr;
-  }
-  article {
-    padding:25px
-  }
-    </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <input id="night__sday" type="button" value="night" onclick="
+  var target = document.querySelector('body');
+  if(this.value === 'night'){
+    target.style.backgroundColor = 'black';
+    target.style.color = 'white';
+    this.value = 'day';
+
+    var alist = document.querySelectorAll('a');
+    var i = 0;
+    while(i<alist.length) {
+      alist[i].style.color = 'white';
+      i = i+1;
+    }
+
+  } else {
+    target.style.backgroundColor = 'white';
+    target.style.color = 'black';
+    this.value = 'night';
+
+    var alist = document.querySelectorAll('a');
+    var i = 0;
+    while(i<alist.length) {
+      alist[i].style.color = 'black';
+      i = i+1;
+    }
+  }
+  ">
   <h1><a href="index.html">POP SONG</a></h1>
 <div id="grid">
   <ol>
@@ -48,7 +47,7 @@
     <img src="img3.jpg" width=300></a>
   <br>
   <iframe width="560" height="315" src="https://www.youtube.com/embed/y8AWFf7EAc4" frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   allowfullscreen></iframe>
   <p>I've heard there was a secret chord</p>
   <p>That David played, and it pleased the Lord</p>
